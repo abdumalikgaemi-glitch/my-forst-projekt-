@@ -19,3 +19,59 @@
     <audio src="MIA BOYKA - Экспонат (slowedreverb) [Hardtekk].mp3" controls></audio>
 </body>
 </html>
+<style>
+        /* Стиль для заднего фона всего сайта (темный, чтобы RGB светилось ярче) */
+        body {
+            background-color: #0d1117;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Главный контейнер сайта с RGB переливанием по краям */
+        .rgb-box {
+            background-color: #161b22;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            
+            /* Создаем эффект светящейся RGB рамки */
+            border: 4px solid transparent;
+            border-image: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000) 1;
+            box-shadow: 0 0 20px rgba(0, 255, 213, 0.3);
+            
+            /* Подключаем анимацию */
+            animation: rgb-animation 6s linear infinite;
+        }
+
+        /* Код самой анимации изменения цвета */
+        @keyframes rgb-animation {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        /* Стили для плееров, чтобы они были аккуратными */
+        audio {
+            width: 100%;
+            margin: 10px 0 25px 0;
+        }
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #00ffd5;
+        }
+        p {
+            color: #8b949e;
+        }
+    </style>
